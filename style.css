@@ -137,7 +137,7 @@ header {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 200px;
 }
 
 .nav {
@@ -383,16 +383,24 @@ header {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* object-fit: cover; */
     /* grid-template-columns: repeat(4, 1fr); */
+    grid-gap: 1em;
+    
 }
 
 
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    
 }
 
 .portfolio__img {
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
@@ -405,8 +413,8 @@ header {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .5;
+    transform: scale(1.1);
+    opacity: .9;
 }
 
 
@@ -457,16 +465,30 @@ header {
 
 /* Individual portfolio item styles */
 
+a {
+    color: var(--clr-dark);
+    text-decoration: none;
+}
+
 .portfolio-item-individual {
     padding: 0 2em 2em;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.portfolio-item-individual img {
+/* .portfolio-item-individual img {
     margin-left: auto;
     margin-right: auto;
-}
+    height: 200px;
+    width: 100px;
+    overflow: hidden;
+
+    
+} */
+
+/* a .intro__img {
+    max-width: 250px;
+} */
 
 .portfolio-item-individual p {
     max-width: 600px;
