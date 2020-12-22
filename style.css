@@ -132,7 +132,7 @@ h3{ font-size: var(--fs-h3)}
     
 }
 
-.section__subtitle--work {
+.section__subtitle--work, .section__subtitle--certificates {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
@@ -431,6 +431,56 @@ header {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+/*My Certificates*/
+
+.my-certificates {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;
+}
+
+.all-certificates {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+    max-width: 1200px;
+}
+
+
+.one-certificate__item {
+    background: var(--clr-accent);
+    overflow: hidden;
+    
+}
+
+.one-certificate__img {
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+@media (max-width: 360px) {
+    .one-certificate__img {
+        height: 110px;
+    }
+}
+
+.one-certificate__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.one-certificate__img:hover,
+.one-certificate__item:focus .one-certificate__img {
     transform: scale(1.1);
     opacity: .9;
 }
